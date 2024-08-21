@@ -3,7 +3,7 @@
  */
 public class Main {
     public static void main(String[] args) {
-        boolean[] test = new boolean[3];
+        boolean[] test = new boolean[4];
         for (int i = 0 ; i < test.length ; i++){
             test[i] = false;
         }
@@ -18,5 +18,7 @@ public class Main {
         henry.set(-3, 4);
         test[2] = henry.get(-3) == 4;
         System.out.println("Negative getting and setting works is: " + test[2]);
+        test[3] = henry.get(2) == 3;
+        System.out.println("Original values still works is: " + test[2]);
     }
 }
