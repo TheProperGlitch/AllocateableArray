@@ -8,7 +8,7 @@ public class Main {
             test[i] = false;
         }
 
-        AllocatableArray henry = new AllocatableArray();
+        AllocatableArray henry = new AllocatableArray(10);
         henry.set(2, 3);
         test[0] = (henry.get(2) == 3);
         System.out.println("Normal setting and getting works is: " + test[0]);
@@ -21,13 +21,15 @@ public class Main {
         test[3] = henry.get(2) == 3;
         System.out.println("Original values still works is: " + test[3]);
         test[4] = henry.get(9) == 0;
-        System.out.println("Original values still works is: " + test[4]);
-        System.out.println(henry.length());
-        System.out.println(henry.get(-3));
-        for(int i = -3 ; i < 20 ; i++) {
-            System.out.print(i);
-            henry.get(i);
+        System.out.println("Empty values works is: " + test[4]);
+        System.out.println();
+        for (int i = 0; i < henry.length() + 1 ; i++){
+            System.out.print(i + ": ");
+            System.out.print(henry.length() + " | ");
+            System.out.print(henry.get(i - 3) + " | ");
+            System.out.println(henry.length());
         }
+        
         
 
     }
